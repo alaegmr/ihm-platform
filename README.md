@@ -9,3 +9,4 @@ Features: teacher-student communication, access to courses/TP/TD, and user authe
 
 ## 📱 Prototype
 The prototype of this app was created with **Balsamiq**.
+- [View the PDF version](Prototype.pdf)
