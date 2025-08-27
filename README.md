@@ -6,3 +6,6 @@ Features: teacher-student communication, access to courses/TP/TD, and user authe
 # 🛠️ Technologies Used  
 - HTML / CSS  
 - JavaScript  
+
+## 📱 Prototype
+The prototype of this app was created with **Balsamiq**.
