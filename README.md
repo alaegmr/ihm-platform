@@ -1,5 +1,9 @@
-💻 IHM Learning Platform
+# 💻 IHM Learning Platform  
 
-Web app for the Human-Computer Interaction (IHM) course.
-Features: teacher–student communication, access to courses/TP/TD, authentication, and social links.
-Built with HTML/CSS
+A simple **web application** for the IHM (Human-Computer Interaction) course.  
+Features: teacher-student communication, access to courses/TP/TD, and user authentication.  
+
+## 🛠️ Technologies Used  
+- HTML / CSS  
+- JavaScript  
+- (Backend framework if added later)  
