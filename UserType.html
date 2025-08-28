@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+         @font-face {
+            font-family: 'Calibre';
+            font-style: normal;
+            font-weight: 500;
+            src: local('Calibre'), url('https://fonts.cdnfonts.com/s/22257/CalibreMedium.woff') format('woff');
+        }
+
+        @font-face {
+            font-family: 'CalibreBold';
+            font-style: normal;
+            font-weight: 700;
+            src: local('Calibre'), url('https://fonts.cdnfonts.com/s/22257/CalibreBold.woff') format('woff');}
+        body {
+            font-family: 'Calibre', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ecf0f1;
+            color: #000000;
+        }
+
+        header {
+            background-color: #B8DFCE;
+            color: #000000;
+            padding: 10px;
+            text-align: center;
+            height: 67px;
+
+        }
+
+        section {
+            padding: 30px;
+            text-align: center;
+        }
+
+        #userTypeSelection {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 40px;
+        }
+
+        #userTypeSelection img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        #userTypeSelection img:hover {
+            transform: scale(1.1);
+        }
+
+        footer {
+            background-color: #B8DFCE;
+            color: #000000;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            height: 60px;
+        }
+        .size{
+            font-size: 19px;
+        }
+        div .footer{
+
+}
+.social-icons{
+        padding:30px; 
+        background-color:#B8DFCE;
+    text-align: center;
+    height: 6px;
+    }
+    .social-icons a{
+        color:#000000;
+  
+    font-size:30px;
+    margin: 0 5px;
+    text-decoration:none;
+    position: relative;
+    top: -10px;
+    }
+    </style>
+    <title>Sélection du Type d'Utilisateur</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>IHM Plateforme</h1>
+    </header>
+
+    <section>
+        <h2>Veuillez sélectionner votre type d'utilisateur :</h2>
+
+        <div id="userTypeSelection">
+            <div>
+                <img src="etudiant.jpg" alt="Étudiant" onclick="redirectToPage('SignUpEtud.php')" />
+                <p class="size">Étudiant</p>
+            </div>
+
+            <div>
+                <img src="ens2.jpg" alt="Enseignant" onclick="redirectToPage('SignUpEns.php')" />
+                <p class="size">Enseignant</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="social-icons">
+        <!--<div class="social-icons">-->
+          <a href="website" target="_blank" title="facebook"> 
+            <i class="fa fa-facebook-square" ></i>
+          </a>
+          <a href="website" target="_blank" title="twitter"> 
+            <i class="fa fa-twitter-square" ></i>
+          </a>
+          <a href="website" target="_blank" title="youtube">
+            <i class="fa fa-youtube-square" ></i>
+          </a>
+          <a href="website" target="_blank" title="linkedin">
+            <i class="fa fa-linkedin-square" ></i>
+          </a>
+          </footer>
+
+    <script>
+        function redirectToPage(page) {
+            window.location.href = page;
+        }
+    </script>
+
+</body>
+
+</html>

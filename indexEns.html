@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alkatra&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alkatra&family=Oswald:wght@500&display=swap" rel="stylesheet">
+
+    <title>Accueil -IHM Plateforme</title>
+    <style type="text/css">
+        @font-face {
+            font-family: 'Calibre';
+            font-style: normal;
+            font-weight: 500;
+            src: local('Calibre'), url('https://fonts.cdnfonts.com/s/22257/CalibreMedium.woff') format('woff');
+        }
+
+        @font-face {
+            font-family: 'CalibreBold';
+            font-style: normal;
+            font-weight: 700;
+            src: local('Calibre'), url('https://fonts.cdnfonts.com/s/22257/CalibreBold.woff') format('woff');
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Calibre', Arial, sans-serif; /* Ajout de la police personnalisée */
+            background-color: #ecf0f1;
+            color: #000000;
+        }
+
+        header {
+            background-color: #B8DFCE;
+            color: #000000;
+            padding: 0.5px;
+            text-align: left;
+            height: 77px;
+        }
+        div .footer{
+            height: 70px;
+        }
+        .social-icons{
+                padding:30px; 
+                background-color:#B8DFCE;
+            text-align: center;
+            height: 6px;
+            }
+            .social-icons a{
+                color:#000000;
+          
+            font-size:30px;
+            margin: 0 5px;
+            text-decoration:none;
+            position: relative;
+            top: -10px;
+            }
+
+        header h1 {
+            margin-left: 25px;
+            font-size: 30px;
+        }
+
+        nav {
+            background-color: #2c3e50;
+            color: #ffffff;
+            padding: 10px;
+            height: 30px;
+
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 15px;
+            margin: 0 15px;
+            font-weight: bold;
+            font-size: 21px;
+            margin-left: 110px;
+            margin-right: -100px;
+        }
+        .top-left{
+                font-size: 32px;
+                margin-left:60px ;
+                margin-top: 25px;
+                }
+            .centered{
+                position: absolute;
+                top: 43%;
+                left: 50%;
+                transform: translate(-50%, -50%);/*position*/
+                font-size:35px;
+                font-family:'CalibreBold';
+                margin-top:55px ;
+            }
+            .hover-prgrf h3{
+                font-family: 'CalibreBold';
+                font-size: 23px;
+                margin-top: 50px;
+                margin-left: 20px;
+                }
+                .hover-prgrf h1{
+                font-family: 'CalibreBold';
+                font-size: 24px;
+                margin-top: 145px;
+                margin-left: 230px;
+                }
+
+                        section {
+                            padding: 30px;
+        }
+
+        button {
+    padding: 7px;
+    background-color: #138554;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    font-family: 'Calibre', Arial, sans-serif;
+    margin-left: 65px;
+    margin-right: 15px;
+    position: relative;
+    top: 0px;
+    font-size: 16px;
+    float: right;
+    transition: background-color 0.3s; /* Add a smooth transition effect */
+}
+
+button:hover {
+    background-color: #6dbe96; /* Change the background color on hover */
+}
+        #x{
+            margin-right: -20px;
+        }
+        #y{
+            margin-left: 45px;
+        }
+
+        button:hover {
+            background-color: #B8DFCE;
+        }
+        h2{
+            font-size: 35px;
+            margin-left: 75px;
+            
+        }
+        p{
+            font-size: 25px;
+            margin-left: 250px;
+            }
+            #profil {
+            list-style: none;
+            display: inline;
+            margin-right: 32px;
+        }
+
+        #profil a {
+            color: #000000;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 20px;
+            margin-right: 35px;
+            margin-top: -50px;
+            float: right;        }
+
+        #profil i {
+            margin-right: 5px; /* Espacement entre l'icône et le texte du lien */
+        }
+        #logout{
+            padding: 7px;
+            background-color: #138554;
+            color: #ffffff;
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+            font-family: 'Calibre', Arial, sans-serif; /* Ajout de la police personnalisée */
+            margin-left:65px;
+            margin-right: 45px;
+            margin-top: -599px;
+            position: relative;
+            top: 0px;
+            font-size: 16px;
+            float: right;
+
+        }
+        #logout {
+    transition: background-color 0.3s; /* Add a smooth transition effect */
+    background-color:#0D6E3D ;
+    border: none;
+    padding: 7px;
+    cursor: pointer;
+    border-radius: 10px;
+    font-family: 'Calibre', Arial, sans-serif;
+    margin-left: 65px;
+    margin-right: 30px;
+    position: relative;
+    top: 0px;
+    font-size: 16px;
+    float: right;
+}
+
+#logout:hover {
+    background-color: #6dbe96; /* Change the background color on hover */
+}
+               /* Style pour le lien actif */
+               nav a.active {
+              color: #FFF4A3; /* Couleur de surbrillance */
+         font-weight: bold; /* Style de police plus fort (optionnel) */
+            }
+            /*#logout:hover {
+            background-color: #B8DFCE;
+        }*/
+    </style>
+</head>
+<body>
+    <header>
+        <h1>IHM Plateforme</h1>
+        <ul>
+            <li id="profil"><a href="http://localhost/profilEns.php"><i class="fa fa-user"></i>Profil</a></li>
+        </ul>
+    </header>
+    <nav>
+        <a href="indexEns.html" class="active">Accueil</a>
+        <a href="http://localhost/enseignant.php">Espace Enseignant</a>
+        <a href="http://localhost/Answer.php">Espace d'échanges</a>
+
+    </nav>
+    <section>
+        <!--
+        <h2>Bienvenue sur l'Application IHM</h2>
+        <p id="1">Une plateforme interactive dédiée à la communication et à l'assistance</p>
+        <p>entre enseignants et étudiants du module IHM.</p>
+        -->
+        <div class="top-left">Bienvenue sur l'Application IHM<br><span>Votre espace interactif dédié à </span></div>
+        <div class="centered"> la matière Interaction Homme-Machine</div>
+        <div class="hover-prgrf">
+        <h1>Cette plateforme a été spécialement conçue pour faciliter la communication et l'assistance entre enseignants et étudiants</h1>
+        <h3>  offrant un soutien efficace dans l'apprentissage et la compréhension des cours, des travaux pratiques (TP) et des travaux dirigés (TD).</h3>
+          </div>
+
+    </section>
+    <div class="footer">
+    <footer class="social-icons">
+        <!--<div class="social-icons">-->
+          <a href="website" target="_blank" title="facebook"> 
+            <i class="fa fa-facebook-square" ></i>
+          </a>
+          <a href="website" target="_blank" title="twitter"> 
+            <i class="fa fa-twitter-square" ></i>
+          </a>
+          <a href="website" target="_blank" title="youtube">
+            <i class="fa fa-youtube-square" ></i>
+          </a>
+          <a href="website" target="_blank" title="linkedin">
+            <i class="fa fa-linkedin-square" ></i>
+          </a>
+          </footer>
+    </div> 
+    <button id="logout"><a 
+        <button style="color: white; text-decoration: none;" href="index.html">Déconnexion</a></button>
+
+</body>
+</html>

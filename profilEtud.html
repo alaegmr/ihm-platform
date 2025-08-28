@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alkatra&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alkatra&family=Oswald:wght@500&display=swap" rel="stylesheet">
+
+    <title>Profil Etudiant - IHM</title>
+</head>
+<style>
+    @font-face {
+            font-family: 'Calibre';
+            font-style: normal;
+            font-weight: 500;
+            src: local('Calibre'), url('https://fonts.cdnfonts.com/s/22257/CalibreMedium.woff') format('woff');
+        }
+
+        @font-face {
+            font-family: 'CalibreBold';
+            font-style: normal;
+            font-weight: 700;
+            src: local('Calibre'), url('https://fonts.cdnfonts.com/s/22257/CalibreBold.woff') format('woff');
+        }
+
+        body {
+            font-family: 'Calibre', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ecf0f1;
+            color: #2c3e50;
+        }
+
+        header {
+            background-color: #3498db;
+            color: #ffffff;
+            padding: 10px;
+            text-align: center;
+            font-family: 'Calibre', Arial, sans-serif;
+            height: 67px;
+        }
+
+        nav {
+            background-color: #2c3e50;
+            color: #ffffff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 18px;
+        }
+   div #student-details{
+        margin-left: 200px;
+        margin-top:-130px;
+
+}
+
+
+.bordered-box {
+    border: 1px solid #3498db; /* Couleur de la bordure des boîtes */
+    border-radius: 10px;
+    border-width: 2px;
+    padding: 15px;
+    margin-left: 15px;
+    margin-top: 20px;
+    width: 95%;
+    height: 120px;
+    background-color: #ecf0f1; /* Couleur de fond des boîtes */
+}
+#cours{
+    border: 1px solid #3498db;
+    border-radius: 10px;
+    border-width: 2px;
+    width: 30%;
+    margin-top: -250px;
+
+
+}
+button#logout {
+    margin-top: 280px;
+    margin-left: 1200px;
+    padding: 7px;
+    background-color: #2c3e50;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 16px;
+}
+ img #profile_picture{
+   /* width: 20%;
+    height: 20%;*/
+
+}
+.section {
+            width: 30%;
+            padding: 15px;
+            border-radius: 10px;
+            background-color: #ecf0f1; /* Couleur de fond des boîtes */
+            border: 2px solid #3498db;
+            margin: 15px;
+        }
+
+         /* Styles pour chaque section (Cours, TD, TP) */
+         .section-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+            min-height: 100px;        
+            }
+</style>
+<body>
+    <header>
+        <h1>Profil Etudiant</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#accueil">Accueil</a></li>
+            <li><a href="#cours" style="color: yellow; font-weight: bold;">Page Etudiant</a></li>
+            <li><a href="#profile" class="active">Profil Etudiant</a></li>
+        </ul>
+    </nav>
+
+    <section id="student-profile">
+        <div id="profile-info" class="bordered-box">
+            <img style="height: 115px; width: 115px; margin-left: 30px; border-radius: 15px;" src="avatar.png" alt="Avatar" id="profile-picture">
+            <div id="student-details">
+                <h2 style="color: #3498db;" >Nom Complet de l'Étudiant</h2>
+                <p>Numéro d'étudiant: <span id="student-id">123456</span></p>
+                <p>Niveau: <span id="student-level">Licence 3</span></p>
+                <!-- Ajoutez d'autres détails du profil ici -->
+            </div>
+        </div>
+<!--
+        <div id="student-courses" class="bordered-box">
+            <h2>Cours Inscrits</h2>
+            <ul>
+                <li>Cours 1</li>
+                <li>Cours 2</li>
+                <!-- Ajoutez d'autres cours ici -->
+            </ul>
+        </div>
+    
+    </section>
+    <!--
+        <button id="logout">Déconnexion</button>
+        -->
+         <!-- Conteneur principal -->
+    <div class="section-container">
+
+        <!-- Boîte pour les Cours -->
+        <div style="font-size: 14px; text-align: center; " class="section cours">
+            <h2 style="margin-top: 2px; color: #3498db;;" >Cours Inscrits</h2>
+
+        </div>
+
+        <!-- Boîte pour les TD -->
+        <div style="font-size: 14px; text-align: center; " class="section td">
+            <h2 style="margin-top: 2px; color: #3498db;" >TDs Inscrits</h2>
+
+        </div>
+
+        <!-- Boîte pour les TP -->
+        <div style="font-size: 14px; text-align: center; " class="section tp">
+            <h2 style="margin-top: 2px; color: #3498db;" >TPs Inscrits</h2>
+
+        </div>
+    </div>
+        
+</body>
+</html>

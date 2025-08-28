@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alkatra&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alkatra&family=Oswald:wght@500&display=swap" rel="stylesheet">
+
+    <title>Profil Enseignant - IHM</title>
+</head>
+<style>
+    @font-face {
+        font-family: 'Calibre';
+        font-style: normal;
+        font-weight: 500;
+        src: local('Calibre'), url('https://fonts.cdnfonts.com/s/22257/CalibreMedium.woff') format('woff');
+    }
+
+    /* Le reste de votre CSS ici */
+
+    body {
+        font-family: 'Calibre', Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #ecf0f1;
+        color: #2c3e50;
+    }
+
+    /* Le reste de votre CSS ici */
+</style>
+<body>
+    <header>
+        <h1>Profil Enseignant</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="indexEns.html">Accueil</a></li>
+            <li><a href="profilEns.html" style="color: #FFF4A3; font-weight: bold;">Profil Enseignant</a></li>
+            <li><a href="enseignant2.php" class="active">Page Enseignant</a></li>
+            <li><a href="Answer.php" class="active">Donner Aide</a></li>
+        </ul>
+    </nav>
+
+    <section id="student-profile">
+        <?php
+        // Connexion à la base de données
+        $servername = "votre_serveur";
+        $username = "votre_nom_utilisateur";
+        $password = "votre_mot_de_passe";
+        $dbname = "votre_base_de_donnees";
+
+        $conn = new mysqli($servername, $username, $password, $dbname);
+
+        // Vérifier la connexion
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+        }
+
+        // Requête SQL pour récupérer les informations de l'enseignant (remplacez 'ID_ENSEIGNANT' par l'ID de l'enseignant dont vous souhaitez récupérer les données)
+        $sql = "SELECT * FROM enseignants WHERE id_ens = 'ID_ENSEIGNANT'";
+        $result = $conn->query($sql);
+
+        if ($result->num_rows > 0) {
+            // Récupérer les données de l'enseignant
+            $row = $result->fetch_assoc();
+            $nom_ens = $row['nom_ens'];
+            $prenom_ens = $row['prenom_ens'];
+            $diplome_ens = $row['diplome_ens'];
+            $categorie_ens = $row['categorie_ens'];
+            $email_ens = $row['email_ens'];
+
+            // Afficher les données dans la section du profil
+            echo '<div id="profile-info" class="bordered-box">';
+            echo '<img style="height: 115px; width: 115px; margin-left: 30px; border-radius: 15px;" src="avatar.png" alt="Avatar" id="profile-picture">';
+            echo '<div id="student-details">';
+            echo '<h2 style="color: #000000;">' . $nom_ens . ' ' . $prenom_ens . '</h2>';
+            echo '<p>Diplomé(e) en :<span id="student-level">' . $diplome_ens . '</span></p>';
+            echo '<p>Chargé(e) de:<span id="student-level">' . $categorie_ens . '</span></p>';
+            echo '<p>Email enseignant :<span id="student-level">' . $email_ens . '</span></p>';
+            echo '</div>';
+            echo '</div>';
+        } else {
+            echo "Aucun résultat trouvé";
+        }
+
+        // Fermer la connexion à la base de données
+        $conn->close();
+        ?>
+    </section>
+
+    <!-- Le reste de votre code HTML ici -->
+
+</body>
+</html>
